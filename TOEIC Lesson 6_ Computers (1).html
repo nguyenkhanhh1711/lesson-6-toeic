@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TOEIC Lesson 6: Computers</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8fbfd;--grid:#e4ecf1;--ink:#1d2b3a;--mute:#5d6f80;--blue:#cfe4f1;--blue2:#a9cfe5;--pink:#e58fa8;--pinkbg:#fde7ee;--card:#fff;--ok:#2e9e6b;--okbg:#e0f5ea;--bad:#d2466a;--badbg:#fde4eb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#111a22;--grid:#1a2630;--ink:#e8f0f6;--mute:#9db0c0;--blue:#1f3647;--blue2:#2f5670;--pink:#f09ab3;--pinkbg:#3a2530;--card:#18232d;--ok:#5fd09a;--okbg:#17372a;--bad:#f27a9a;--badbg:#3d1f2b}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111a22;--grid:#1a2630;--ink:#e8f0f6;--mute:#9db0c0;--blue:#1f3647;--blue2:#2f5670;--pink:#f09ab3;--pinkbg:#3a2530;--card:#18232d;--ok:#5fd09a;--okbg:#17372a;--bad:#f27a9a;--badbg:#3d1f2b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg) linear-gradient(var(--grid) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/28px 28px;color:var(--ink);font:16px/1.65 "Be Vietnam Pro",system-ui,sans-serif}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.2;margin:0}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 14px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--grid)}
+nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-size:14px;padding:5px 12px;border-radius:20px}nav a:hover{background:var(--blue)}
+nav .sc{margin-left:auto;white-space:nowrap;font-size:14px;color:var(--mute);padding:5px 8px}
+main{max-width:820px;margin:auto;padding:0 18px 80px}
+section{padding:56px 0 8px}
+.hero{padding:70px 0 30px;position:relative}
+.hero h1{font-size:clamp(38px,8vw,66px);font-weight:700}.hero h1 i{font-weight:500;color:var(--pink)}
+.hero p{color:var(--mute);max-width:520px}
+.blk{position:absolute;right:0;top:40px;width:38%;height:200px;background:var(--blue);z-index:-1;border-radius:4px;animation:slide 1.2s ease-out}
+.blk+.blk{top:170px;width:22%;background:var(--pinkbg);animation-delay:.2s}
+@keyframes slide{from{transform:translateX(60px);opacity:0}}
+h2{font-size:clamp(26px,5vw,36px);margin-bottom:6px}.sub{color:var(--mute);margin:0 0 22px}
+.rv{opacity:0;transform:translateY(22px);transition:.7s}.rv.in{opacity:1;transform:none}
+.card{background:var(--card);border:1px solid var(--grid);border-radius:10px;padding:20px;margin-bottom:18px}
+.btn{font:inherit;font-size:14px;border:1px solid var(--blue2);background:var(--blue);color:var(--ink);border-radius:20px;padding:6px 14px;cursor:pointer;transition:.2s}.btn:hover{background:var(--blue2)}
+.btn.p{background:var(--pink);border-color:var(--pink);color:#fff}
+.vi{color:var(--mute);border-left:3px solid var(--pink);padding-left:12px;margin:12px 0}
+.en b{background:var(--pinkbg);border-radius:4px;padding:0 3px;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--grid);vertical-align:top}th{font-family:"Playfair Display",serif;color:var(--mute);font-weight:500}
+.ipa{color:var(--mute);font-size:14px}.sp{cursor:pointer;background:none;border:0;font-size:16px;padding:0 4px}
+.fcw{perspective:1000px;max-width:420px;margin:auto}
+.fc{height:240px;position:relative;transform-style:preserve-3d;transition:transform .6s;cursor:pointer}.fc.f{transform:rotateY(180deg)}
+.fc>div{position:absolute;inset:0;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;border-radius:12px;border:1px solid var(--blue2);background:var(--blue)}
+.fc .bk{transform:rotateY(180deg);background:var(--card)}
+.fc h3{font-size:30px}.fc small{color:var(--mute);margin-top:10px}
+.ctl{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:16px}
+.q{background:var(--card);border:1px solid var(--grid);border-radius:10px;padding:16px 18px;margin-bottom:14px}
+.q p{margin:0 0 10px;font-weight:500}
+.o{display:block;width:100%;text-align:left;font:inherit;color:var(--ink);background:none;border:1px solid var(--grid);border-radius:8px;padding:8px 12px;margin:6px 0;cursor:pointer;transition:.15s}
+.o:hover:not(:disabled){border-color:var(--blue2);background:var(--blue)}
+.o.ok{background:var(--okbg);border-color:var(--ok)}.o.no{background:var(--badbg);border-color:var(--bad);animation:sh .3s}
+@keyframes sh{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.ex{display:none;margin-top:8px;padding:10px 12px;border-radius:8px;font-size:14.5px;background:var(--pinkbg)}.ex.show{display:block;animation:fd .4s}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}}
+.bank{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}.bank span{background:var(--blue);border-radius:14px;padding:2px 10px;font-size:14px}
+.pas{line-height:2.4}
+select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--blue2);border-radius:6px;padding:2px 4px;max-width:130px}
+select.ok{background:var(--okbg);border-color:var(--ok)}select.no{background:var(--badbg);border-color:var(--bad)}
+.ans{color:var(--ok);font-size:13px;font-weight:600}
+input[type=text]{width:100%;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--blue2);border-radius:8px;padding:8px 12px;margin:4px 0 8px}
+footer{text-align:center;color:var(--mute);padding:30px;font-size:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(max-width:560px){.blk{opacity:.5}}
+</style>
+</head>
+<body>
+<nav><a href="#top">Đầu trang</a><a href="#cards">Flashcard</a><a href="#learn">Bài học</a><a href="#p1">Bài tập 1</a><a href="#p2">Bài tập 2</a><a href="#p3">Bài tập 3</a><a href="#p4">Bài tập 4</a><span class="sc" id="sc">Đúng 0/0</span></nav>
+<main>
+<header class="hero" id="top"><div class="blk"></div><div class="blk"></div>
+<h1>TOEIC Lesson 6:<br><i>Computers</i></h1>
+<p>12 từ vựng cốt lõi về máy tính (600 Essential Words). Học bằng flashcard, đọc đoạn văn có giọng đọc, rồi làm bài tập và xem đáp án giải thích ngay.</p></header>
+
+<section id="cards" class="rv"><h2>Flashcard</h2><p class="sub">Xem nghĩa tiếng Việt trước, chạm thẻ để lật sang từ tiếng Anh.</p>
+<div class="fcw"><div class="fc" id="fc"></div></div>
+<div class="ctl"><button class="btn" id="pv">Trước</button><span id="fi"></span><button class="btn" id="nx">Sau</button><button class="btn p" id="sh">Trộn thẻ</button></div></section>
+
+<section id="learn" class="rv"><h2>Bài học</h2><p class="sub">Nhấn nút loa để nghe đoạn văn hoặc từng từ.</p><div id="ls"></div></section>
+
+<section id="p1" class="rv"><h2>Bài tập 1: Nghĩa của từ</h2><p class="sub">Chọn nghĩa đúng (câu 1–12).</p><div id="q1"></div></section>
+<section id="p2" class="rv"><h2>Bài tập 2: Điền từ vào đoạn văn</h2><p class="sub">Chọn từ thích hợp cho mỗi chỗ trống.</p><div class="bank" id="bank"></div><div class="card pas" id="pas"></div><button class="btn" id="tr">Xem bản dịch</button><div class="vi" id="trt" style="display:none"></div></section>
+<section id="p3" class="rv"><h2>Bài tập 3: Từ vựng và ngữ pháp</h2><p class="sub">Câu 13–52. Chú ý loại từ cần điền.</p><div id="q3"></div></section>
+<section id="p4" class="rv"><h2>Bài tập 4: Dịch câu</h2><p class="sub">Dịch sang tiếng Anh bằng từ gợi ý, dùng cấu trúc S + V + O.</p><div id="q4"></div></section>
+</main>
+<footer>Hoàn thành bài học. Ôn lại flashcard để nhớ lâu hơn.</footer>
+<script>
+const $=s=>document.querySelector(s);
+const V=[["allocate","/ˈæləkeɪt/","v","Phân bổ, cấp cho","allocation (n), allocated (adj)"],["compatible","/kəmˈpætəbl/","adj","Tương thích, hợp nhau","compatibility (n)"],["display","/dɪˈspleɪ/","n, v","Màn hình hiển thị (n) / Hiển thị, trưng bày (v)","—"],["access","/ˈækses/","n, v","Quyền truy cập (n) / Truy cập (v)","accessible (adj)"],["duplicate","/ˈduːplɪkeɪt/","v, n","Nhân bản, sao chép (v) / Bản sao (n)","duplication (n)"],["delete","/dɪˈliːt/","v","Xóa bỏ","deletion (n)"],["search","/sɜːrtʃ/","n, v","Sự tìm kiếm (n) / Tìm kiếm (v)","—"],["figure out","/ˈfɪɡjər aʊt/","v","Tìm ra, hiểu ra, giải quyết","—"],["ignore","/ɪɡˈnɔːr/","v","Phớt lờ, bỏ qua, không chú ý","ignorance (n), ignored (adj)"],["warning","/ˈwɔːrnɪŋ/","n","Lời cảnh báo, báo động","warn (v), warning (adj)"],["failure","/ˈfeɪljər/","n","Sự thất bại, sự cố, hỏng hóc","fail (v), fallible (adj)"],["shut down","/ʃʌt daʊn/","v","Tắt máy, ngừng hoạt động","shutdown (n)"]];
+const P=[["Part 1: Setting up the System","To set up your new office, we will allocate a new computer to you. You must ensure your software is compatible with the new operating system. When you turn on the monitor, you will see a bright display. You will need a special password to access the company files securely.","Để thiết lập văn phòng mới của bạn, chúng tôi sẽ phân bổ (cấp) một máy tính mới cho bạn. Bạn phải đảm bảo phần mềm của bạn tương thích với hệ điều hành mới. Khi bạn bật màn hình, bạn sẽ thấy một màn hình hiển thị sáng. Bạn sẽ cần một mật khẩu đặc biệt để truy cập các tệp của công ty một cách an toàn.",[0,1,2,3]],["Part 2: Managing Files","It is a very good idea to duplicate your important documents every week. If you make a mistake, you can delete the old files from the hard drive. Sometimes, you can use the search bar to search for lost folders quickly. It might take some time to figure out how to use the new program perfectly.","Sẽ là một ý kiến rất hay nếu nhân bản (sao chép) các tài liệu quan trọng của bạn mỗi tuần. Nếu bạn mắc lỗi, bạn có thể xóa các tệp cũ khỏi ổ cứng. Đôi khi, bạn có thể sử dụng thanh tìm kiếm để tìm kiếm các thư mục bị mất một cách nhanh chóng. Có thể mất chút thời gian để tìm ra (hiểu ra) cách sử dụng chương trình mới một cách hoàn hảo.",[4,5,6,7]],["Part 3: System Issues","Never ignore a virus alert on your computer screen. A red flashing light is a serious warning that you should stop working immediately. If there is a sudden power failure, you will lose your unsaved work. Therefore, always remember to shut down the machine properly before you go home.","Đừng bao giờ phớt lờ (bỏ qua) cảnh báo vi-rút trên màn hình máy tính của bạn. Đèn đỏ nhấp nháy là một lời cảnh báo nghiêm trọng rằng bạn nên ngừng làm việc ngay lập tức. Nếu có sự cố (sự thất bại) mất điện đột ngột, bạn sẽ mất công việc chưa được lưu. Do đó, hãy luôn nhớ tắt máy tính đúng cách trước khi về nhà.",[8,9,10,11]]];
+const Q1=`access|Phân bổ;Truy cập;Màn hình;Tương thích|1
+allocate|Xóa bỏ;Tìm ra;Phân bổ, cấp;Sao chép|2
+compatible|Tương thích;Lỗi hệ thống;Màn hình;Truy cập|0
+delete|Hiểu ra;Xóa bỏ;Cảnh báo;Tắt máy|1
+display|Màn hình hiển thị;Truy cập;Phân bổ;Tìm kiếm|0
+duplicate|Bỏ qua;Phân bổ;Nhân bản, sao chép;Cảnh báo|2
+failure|Truy cập;Sự cố, sự thất bại;Tương thích;Màn hình|1
+figure out|Bỏ qua;Tìm ra, hiểu ra;Cảnh báo;Tắt máy|1
+ignore|Phớt lờ, bỏ qua;Truy cập;Tìm kiếm;Xóa bỏ|0
+search|Hiểu ra;Tương thích;Phân bổ;Tìm kiếm|3
+shut down|Khởi động;Tắt máy;Nhân bản;Phớt lờ|1
+warning|Lời cảnh báo;Bản sao;Màn hình;Sự thất bại|0`;
+const Q3=`Do you have a password to ___ the computer?|access|allocate|ignore|duplicate|0|Cần động từ: access = truy cập máy tính.
+This website is easily ___ on mobile phones.|access|accesses|accessible|accessing|2|Sau "is easily" cần tính từ: accessible = có thể truy cập.
+The manager will ___ the money tomorrow.|shut down|allocate|failure|display|1|Sau will cần động từ: allocate money = phân bổ tiền.
+The ___ of resources was not fair.|allocate|allocated|allocation|allocates|2|Sau "The", trước "of" cần danh từ: allocation = sự phân bổ.
+Make sure your printer is ___ with this PC.|warning|accessible|compatible|allocated|2|be compatible with = tương thích với.
+There is a problem with the system’s ___.|compatible|compatibility|allocation|duplication|1|Sau sở hữu cách cần danh từ: compatibility = sự tương thích.
+Please ___ all your personal files.|figure out|search|access|delete|3|delete = xóa bỏ các tệp cá nhân.
+The ___ of those files was a huge mistake.|deletion|delete|deleted|deletes|0|Sau "The", trước "of" cần danh từ: deletion = sự xóa bỏ.
+The new phone has a beautiful ___.|failure|display|warning|ignorance|1|display (n) = màn hình hiển thị.
+The program will ___ your score on screen.|access|search|display|shut down|2|display (v) = hiển thị điểm số trên màn hình.
+Please ___ this key for me.|figure out|duplicate|fail|ignore|1|duplicate a key = sao (đánh) thêm một chìa khóa.
+I have a ___ copy of the contract.|duplicate|duplication|duplicates|duplicating|0|duplicate (adj) bổ nghĩa cho copy: bản sao.
+A power ___ caused the computer to crash.|access|warning|failure|search|2|power failure = sự cố mất điện.
+We ___ to save the document in time.|failed|failure|fallible|failing|0|Cần động từ chia quá khứ: failed to + V = không kịp làm gì.
+Everyone is ___, even experts make mistakes.|fail|fallible|failed|failure|1|be + tính từ: fallible = có thể mắc lỗi.
+I can’t ___ how to turn on the printer.|figure out|shut down|duplicate|allocate|0|figure out how to... = tìm ra cách làm.
+It took me hours to ___ the puzzle.|search|ignore|figure out|display|2|figure out the puzzle = giải được câu đố.
+He chose to ___ the error message.|ignore|access|allocate|compatible|0|ignore = phớt lờ thông báo lỗi.
+His ___ of computer software is surprising.|ignored|ignore|ignorance|ignores|2|Sau "His" cần danh từ: ignorance = sự thiếu hiểu biết.
+The ___ warning caused serious problems.|ignorance|ignored|ignores|ignore|1|Cần tính từ: ignored warning = lời cảnh báo bị phớt lờ.
+You should ___ the internet for answers.|display|search|shut down|duplicate|1|search the internet = tìm kiếm trên mạng.
+A quick web ___ will give you the result.|search|failure|access|warning|0|web search (n) = việc tìm kiếm trên web.
+Don’t forget to ___ the machine after use.|allocate|figure out|shut down|ignore|2|shut down the machine = tắt máy.
+The sudden ___ of the server lost our data.|shutdown|shut down|shuts down|shutting down|0|Sau "sudden" cần danh từ: shutdown (viết liền) = sự tắt máy.
+There was no ___ before the earthquake.|display|warning|failure|search|1|no warning = không có cảnh báo.
+The software will ___ you if there is a virus.|warn|warning|warns|warned|0|Sau will cần động từ nguyên mẫu: warn = cảnh báo.
+The red light is a ___ sign.|warn|warning|warned|warns|1|warning sign = biển/dấu hiệu cảnh báo.
+We need to ___ our files to a USB drive.|duplicate|ignore|search|shut down|0|duplicate files = sao chép tệp.
+The team ___ the budget for the new project.|allocated|ignored|warned|displayed|0|allocate the budget = phân bổ ngân sách.
+Your computer is not ___ with this mouse.|fallible|accessible|compatible|ignored|2|not compatible with = không tương thích với.
+Did you ___ the email by mistake?|access|delete|figure out|shut down|1|delete the email = xóa email.
+Can you read the text on the ___?|display|failure|allocation|duplicate|0|on the display = trên màn hình.
+She has limited ___ to the internet.|display|warning|access|search|2|access to = quyền truy cập vào (danh từ).
+If you ___ the instructions, you will fail.|ignore|warn|duplicate|allocate|0|ignore the instructions = bỏ qua hướng dẫn.
+They finally ___ the math problem.|searched|shut down|figured out|allocated|2|Quá khứ: figured out = đã giải ra.
+The engine ___ caused the car to stop.|shutdown|warning|deletion|failure|3|engine failure = hỏng động cơ.
+Please ___ the room for my keys.|search|access|duplicate|display|0|search the room = lục soát căn phòng.
+We received a storm ___ on the radio.|warning|ignorance|failure|compatibility|0|storm warning = cảnh báo bão.
+Time to ___ the factory for the night.|figure out|shut down|allocate|delete|1|shut down the factory = ngừng hoạt động nhà máy.
+This is just a ___ of the original painting.|display|duplicate|warning|search|1|a duplicate of = bản sao của.`;
+const B=["shut down","warning","figure out","access","search","deleted","duplicate","ignore","display","failed","allocate","compatible"];
+const PT=`When I try to {0} my computer, a {1} pops up that says “Low Memory.” From there, I can’t {2} what to do. The computer won’t let me {3} any of my files, so I can’t {4} for those that I could delete. I’ve already {5} all of my {6} files, and I can’t believe that my remaining files are using up so much memory. I’d be happy to {7} the computer’s warning, but I have no option, since the {8} is frozen on this message. Do you think I’ve {9} to understand something about the operations of this computer? If you can, would you please {10} a few minutes in your busy schedule to help me solve this dilemma? As I said before, I’m sure that my software is {11} and is not the source of this problem.`;
+const PV="Khi tôi cố gắng (1) tắt máy tính của mình, một (2) lời cảnh báo hiện lên nói rằng “Bộ nhớ thấp.” Từ đó, tôi không thể (3) tìm ra phải làm gì. Máy tính sẽ không cho phép tôi (4) truy cập vào bất kỳ tệp nào, vì vậy tôi không thể (5) tìm kiếm những tệp có thể xóa. Tôi đã (6) xóa tất cả các tệp (7) bản sao của mình và tôi không thể tin được các tệp còn lại lại dùng nhiều bộ nhớ đến vậy. Tôi sẽ rất vui nếu được (8) phớt lờ cảnh báo, nhưng tôi không có lựa chọn nào khác, vì (9) màn hình hiển thị bị đóng băng ở tin nhắn này. Bạn có nghĩ rằng tôi đã (10) thất bại trong việc hiểu một số điều về chiếc máy tính này không? Nếu có thể, bạn vui lòng (11) dành ra vài phút trong lịch trình bận rộn để giúp tôi giải quyết tình thế này được không? Như tôi đã nói, tôi chắc chắn phần mềm của tôi (12) tương thích và không phải là nguồn gốc của vấn đề.";
+const T=[["Tôi muốn truy cập các tệp (files). (access)",["I want to access the files"]],["Họ sẽ phân bổ tiền. (allocate)",["They will allocate the money"]],["Phần mềm này tương thích. (compatible)",["This software is compatible"]],["Vui lòng xóa bức ảnh này. (delete)",["Please delete this photo","Please delete this picture"]],["Màn hình rất lớn. (display)",["The display is very big"]],["Hãy nhân bản tài liệu này. (duplicate)",["Please duplicate this document","Let’s duplicate this document"]],["Sự thất bại làm anh ấy buồn. (failure)",["The failure makes him sad","The failure makes him upset"]],["Tôi không thể tìm ra nó. (figure out)",["I can’t figure it out","I cannot figure it out"]],["Đừng phớt lờ lời khuyên của tôi. (ignore)",["Don’t ignore my advice","Do not ignore my advice"]],["Anh ấy đang tìm kiếm chìa khóa. (search)",["He is searching for the key","He is searching for the keys"]],["Hãy tắt máy tính. (shut down)",["Please shut down the computer","Let’s shut down the computer"]],["Có một cảnh báo nguy hiểm. (warning)",["There is a dangerous warning"]]];
+
+/* audio */
+let ac;function tone(f,t,d,ty){const o=ac.createOscillator(),g=ac.createGain();o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(.15,ac.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+t+d);o.connect(g);g.connect(ac.destination);o.start(ac.currentTime+t);o.stop(ac.currentTime+t+d)}
+function snd(ok){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ok){tone(660,0,.15,"sine");tone(880,.12,.25,"sine")}else{tone(220,0,.18,"sawtooth");tone(150,.15,.3,"sawtooth")}}catch(e){}}
+function say(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.9;speechSynthesis.speak(u)}catch(e){}}
+let ok=0,tot=0;function score(g){tot++;if(g)ok++;$("#sc").textContent=`Đúng ${ok}/${tot}`;snd(g)}
+
+/* flashcards */
+let D=V.slice(),ci=0;
+function card(){const v=D[ci];$("#fc").classList.remove("f");$("#fc").innerHTML=`<div><small>Nghĩa tiếng Việt</small><h3 style="font-size:24px">${v[3]}</h3><small>Chạm để lật</small></div><div class="bk"><h3>${v[0]}</h3><span class="ipa">${v[1]} · ${v[2]}</span><small>${v[4]}</small><button class="btn" style="margin-top:12px" data-s="${v[0]}">🔊 Nghe</button></div>`;$("#fi").textContent=`${ci+1} / ${D.length}`}
+$("#fc").onclick=e=>{const s=e.target.dataset.s;if(s){say(s);return}$("#fc").classList.toggle("f")};
+$("#pv").onclick=()=>{ci=(ci+D.length-1)%D.length;card()};$("#nx").onclick=()=>{ci=(ci+1)%D.length;card()};
+$("#sh").onclick=()=>{D.sort(()=>Math.random()-.5);ci=0;card()};card();
+
+/* lesson */
+const hl=new RegExp("\\b("+V.map(v=>v[0]).join("|")+")\\b","gi");
+$("#ls").innerHTML=P.map((p,i)=>`<div class="card"><h3>${p[0]} <button class="sp" data-p="${i}" title="Nghe đoạn văn">🔊</button></h3><p class="en">${p[1].replace(hl,"<b>$1</b>")}</p><div class="vi">${p[2]}</div><table><tr><th>Từ</th><th>Nghĩa</th><th>Họ từ</th></tr>${p[3].map(k=>{const v=V[k];return`<tr><td><b>${v[0]}</b> <i>${v[2]}</i> <button class="sp" data-w="${v[0]}">🔊</button><br><span class="ipa">${v[1]}</span></td><td>${v[3]}</td><td>${v[4]}</td></tr>`}).join("")}</table></div>`).join("");
+$("#ls").onclick=e=>{const t=e.target;if(t.dataset.p)say(P[t.dataset.p][1]);if(t.dataset.w)say(t.dataset.w)};
+
+/* multiple choice */
+function mc(el,items){el.innerHTML=items.map((it,i)=>`<div class="q" data-i="${i}"><p>${it.n}. ${it.q}${it.w?` <button class="sp" data-w="${it.w}">🔊</button>`:""}</p>${it.o.map((o,j)=>`<button class="o" data-j="${j}">${"ABCD"[j]}. ${o}</button>`).join("")}<div class="ex"></div></div>`).join("");
+el.onclick=e=>{const t=e.target;if(t.dataset.w){say(t.dataset.w);return}if(!t.classList.contains("o"))return;const q=t.closest(".q"),it=items[q.dataset.i],j=+t.dataset.j;q.querySelectorAll(".o").forEach(b=>b.disabled=true);q.querySelectorAll(".o")[it.a].classList.add("ok");if(j!=it.a)t.classList.add("no");const x=q.querySelector(".ex");x.innerHTML=`${j==it.a?"✔ Chính xác.":"✘ Chưa đúng."} Đáp án: <b>${"ABCD"[it.a]}. ${it.o[it.a]}</b><br>${it.e}`;x.classList.add("show");score(j==it.a)}}
+mc($("#q1"),Q1.split("\n").map((l,i)=>{const[w,o,a]=l.split("|"),op=o.split(";");return{n:i+1,q:`Từ “<b>${w}</b>” có nghĩa là gì?`,w,o:op,a:+a,e:`“${w}” nghĩa là “${op[a]}”.`}}));
+mc($("#q3"),Q3.split("\n").map((l,i)=>{const p=l.split("|");return{n:i+13,q:p[0].replace("___","<b>______</b>"),o:p.slice(1,5),a:+p[5],e:p[6]}}));
+
+/* fill in */
+$("#bank").innerHTML=V.map(v=>`<span>${v[0]}</span>`).join("")+"<span>deleted</span><span>failed</span>";
+const opts="<option value=''>…</option>"+[...B].sort().map(b=>`<option>${b}</option>`).join("");
+$("#pas").innerHTML=PT.replace(/\{(\d+)\}/g,(m,n)=>`(${+n+1}) <select data-n="${n}">${opts}</select><span class="ans"></span>`);
+$("#pas").onchange=e=>{const s=e.target,n=+s.dataset.n,g=s.value==B[n];s.disabled=true;s.className=g?"ok":"no";if(!g)s.nextSibling.textContent=" → "+B[n];score(g)};
+$("#tr").onclick=()=>{const t=$("#trt");t.textContent=PV;t.style.display="block"};
+
+/* translation */
+const nz=s=>s.toLowerCase().replace(/[^a-z ]/g,"").replace(/\s+/g," ").trim();
+$("#q4").innerHTML=T.map((t,i)=>`<div class="q"><p>${i+1}. ${t[0]}</p><input type="text" placeholder="Viết câu tiếng Anh…" data-i="${i}"><button class="btn" data-i="${i}">Kiểm tra</button><div class="ex"></div></div>`).join("");
+$("#q4").onclick=e=>{const b=e.target;if(b.tagName!="BUTTON")return;const q=b.closest(".q"),inp=q.querySelector("input"),t=T[b.dataset.i];if(!inp.value.trim()||inp.disabled)return;const g=t[1].some(a=>nz(a)==nz(inp.value));inp.disabled=true;b.disabled=true;const x=q.querySelector(".ex");x.innerHTML=`${g?"✔ Chính xác.":"✘ Chưa khớp đáp án gợi ý."} Gợi ý: <b>${t[1].join(" / ")}.</b> <button class="sp" data-w="${t[1][0]}">🔊</button>`;x.classList.add("show");score(g)};
+$("#q4").addEventListener("click",e=>{if(e.target.dataset.w)say(e.target.dataset.w)});
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.05});
+document.querySelectorAll(".rv").forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
